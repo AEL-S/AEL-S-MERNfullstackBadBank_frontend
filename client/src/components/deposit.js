@@ -1,9 +1,5 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-// import {useState, useEffect } from 'react'
-// import Button from 'react-bootstrap/Button';
-// import axios from 'axios';
-// import balance from './balance';
 import UserContext from '../components/context';
 
 
@@ -15,9 +11,6 @@ function Deposit(){
   const [balance, setBalance] = React.useState(0);
   const [newBalance, setNewBalance] = React.useState(ctx.users[0].balance);
   const [disabled, setDisabled] = React.useState(true);
-  // const [user, setUser] = React.useState('');
-// might remove below not sure
-// let Balance = `Current Account Balance: $ ${ctx.users.newBalance}`;
 
 const validate = amount => {
   if(amount <= 0) {
@@ -37,7 +30,6 @@ const validate = amount => {
 return (true);
   }
 
-
   // idea for deposit call:
 // const url = 'http://localhost:3100/api';
 // export const dataBaseDeposit = (email, password, amount) => {
@@ -46,7 +38,6 @@ return (true);
 //   }
 //   axios.post(url, payload)
 // };
-
 
   // need axios call somewhere around here
   const handleDeposit = amount => {
@@ -70,7 +61,7 @@ return (true);
 	                setDisabled(false);
 	            }
 	    }, [deposit]);
-	    // console.log('useEffect called')
+	  
       
       
       return (   
@@ -88,7 +79,6 @@ return (true);
                   
       {/* <input type="number"  */}
       <input type="input"
-      // min="0" onInput="this.value = Math.abs(this.value)"
        className="form-control" id="deposit" placeholder="Enter amount to deposit" value={deposit} 
       
       onChange={e => {
