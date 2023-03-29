@@ -1,9 +1,5 @@
 import React from 'react';
-// import { useState, useEffect } from 'react';
 import axios from 'axios';
-// import axios from '../api/axios';
-// import AuthContext from '../context/AuthProvider';
-// import UserContext from './context.js';
 import Card from 'react-bootstrap/Card';
 
 // will need to tweak this form/ look up how to set up sign out
@@ -12,11 +8,9 @@ function SignOut(){
     const [status, setStatus] = React.useState('');  
     // const ctx = React.useContext(UserContext);
 
-// this is for firebase but i dont know where to put it 
 // const signOut = () => {
 //   fire.auth().signOut()
 // };
-// --------------------
 
     return (
 <div className="card border-warning mb-3"  style={{ width: "22rem" }}>
@@ -35,7 +29,7 @@ function SignOut(){
 
 )}
 
-//   may need to remove button here, not sure why its here
+//   may need to remove button here
 function SignOutMsg(props){
     return(<>
       <h5>Success</h5>
@@ -50,16 +44,7 @@ function SignOutMsg(props){
   function SignOutForm(props){
     const [email, setEmail]       = React.useState('');
     const [password, setPassword] = React.useState('');
-    // const [errMsg, setErrMsg] = useState('');
-    // const [success, setSuccess] = useState(false);
-  
-
-
-    // useEffect(() => {
-    //     setErrMsg('');
-    // }, [email, password])
-
-
+    
 
 const onSubmit = async (e) => {
     // onSubmit = (event) => {
