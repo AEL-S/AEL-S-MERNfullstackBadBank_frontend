@@ -1,11 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-// import {useState, useEffect } from 'react'
-// import Button from 'react-bootstrap/Button';
-// import axios from 'axios';
-// import balance from './balance';
 import UserContext from '../components/context';
-
 
 
 function Withdraw(){
@@ -56,16 +51,6 @@ function Withdraw(){
       setShow(true);
     }
   
-  //   React.useEffect(() => {
-  //     if (!withdraw) {
-  //         setDisabled(true);
-  //     }
-  //     else {
-  //         setDisabled(false);
-  //     }
-  // }, [withdraw]);
-  // console.log('useEffect called')
-  
   React.useEffect(() => {
     if (!withdraw || withdraw > balance) {
         setDisabled(true);
@@ -74,8 +59,6 @@ function Withdraw(){
         setDisabled(false);
     }
 }, [withdraw, balance]);
-// console.log('useEffect called')
-
 
   return (   
     <Card className="card border-warning mb-3"  style={{width: "22rem" }}>
@@ -90,8 +73,6 @@ function Withdraw(){
       Withdraw Amount<br/>
                
     <input type="input" 
-    // min="0" onInput="this.value = Math.abs(this.value)" 
-    
     className="form-control" id="withdraw" placeholder="Enter amount to withdraw" value={withdraw} 
     onChange={e => {
     validate(e.currentTarget.value);
