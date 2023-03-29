@@ -27,54 +27,10 @@ import SignOut from './components/signout';
 // import ProtectedRoute from "./utils/ProtectedRoute";
 
 import UserContext from '../src/components/context';
-// import withAuth from './withAuth';
-// import fire from './fire';
-// import { AuthContext } from './context/AuthContext';
-
-// function App(){
-//   // testing new code - trying auth-
-//   const [token, setToken] = useState();
-
-//   if(!token) {
-//     return <Login setToken={setToken} />
-
-//   } - this did work but going to try to use sessionstorage - below:
-// end of test --------------------
-
-
-// sessionsstorage test ------
-// was told to remove below functions -
-// function setToken(userToken) {
-//   sessionStorage.setItem('token', JSON.stringify(userToken));
-// }
-
-// function getToken() {
-//   const tokenString = sessionStorage.getItem('token');
-//   const userToken = JSON.parse(tokenString);
-//   return userToken?.token
-// }
 
 function App() {
 // trying to do context - not sure whether its working.
 // const [user, setUser] = useState(null);
-// firebase test ----------
-// const [isLoggedIn, setIsLoggedIn] = useState(false);
-  
-//     fire.auth().onAuthStateChanged((user) => {
-//       return user ? setIsLoggedIn(true) : setIsLoggedIn(false);
-//   });
-  
-//   console.log('logged in?', isLoggedIn);
-// //   return (
-//     <div className="App">
-//       Hello World!
-//     </div>
-//   );
-// }
-
-
-// test end---------
-// const value = useMemo(() => ({ user, setUser }), [user, setUser]);
 
   return (
     <React.Fragment>
@@ -83,8 +39,6 @@ function App() {
       
           <NavBar />
           <UserContext.Provider value={{users:[{name:"testUser", email:"test@mit.edu ", password:"88888888", balance:0 }]}}>
-              {/* <div className="container" style={{padding: "20px"}}> */}
-              {/* NEED to wrap all components that need to be able to access context --- might need to move around later not sure */}
                 <Routes>
               <Route exact path='/home' element={<Home/>} />
             {/* <UserContext.Provider value={value}> */}
@@ -111,7 +65,7 @@ function App() {
           {/* </div> */}
       </HashRouter>
       {/* </BrowserRouter> */}
-      {/* browserrouter does allow changing pages for whatever reason - doesnt work */}
+      {/* browserrouter - doesnt work */}
      </React.Fragment>
   );
 
