@@ -40,7 +40,7 @@ function App() {
           <NavBar />
           <UserContext.Provider value={{users:[{name:"testUser", email:"test@mit.edu ", password:"88888888", balance:0 }]}}>
                 <Routes>
-              <Route exact path='/home' element={<Home/>} />
+              <Route exact path='/' element={<Home/>} />
             {/* <UserContext.Provider value={value}> */}
             {/* <AuthContext.Provider value={value}> */}
               <Route path='/login' element={<Login/>} />
