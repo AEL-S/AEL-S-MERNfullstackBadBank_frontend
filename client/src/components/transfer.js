@@ -1,9 +1,5 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-// import {useState, useEffect } from 'react'
-// import Button from 'react-bootstrap/Button';
-// import axios from 'axios';
-// import balance from './balance';
 import UserContext from '../components/context';
 
 
@@ -43,7 +39,6 @@ const validate = amount => {
 return (true);
   }
 
-
   // idea for transfer call:
 // const url = 'http://localhost:3100/api';
 // export const dataBaseTransfer = (SrcEmail, DestEmail, password, amount) => {
@@ -52,7 +47,6 @@ return (true);
 //   }
 //   axios.post(url, payload)
 // };
-
 
   // need axios call somewhere around here
   const handleTransfer = amount => {
@@ -96,8 +90,6 @@ return (true);
         placeholder="Enter email" 
         value={email} 
         onChange={e => setEmail(e.currentTarget.value)}/>
-        {/* // onChange={this.handleInputChange}/> */}
-          {/* required */}
         <br/>
   
       Password<br/>
@@ -109,7 +101,6 @@ return (true);
      <br/>
      Transfer Amount
       <input type="input"
-      // min="0" onInput="this.value = Math.abs(this.value)"
        className="form-control" id="transfer" placeholder="Enter amount to transfer" value={amount} 
       onChange={e => {
       validate(e.currentTarget.value);
