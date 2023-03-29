@@ -1,13 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-// trying above to see if it works / connects frontend to back end
 
-
-// import UserContext from '../context/context';
 import Card from 'react-bootstrap/Card';
-// import { useState } from "react";
-// import {useState, useEffect } from 'react'
-// import Button from 'react-bootstrap/Button';
+
 import UserContext from '../components/context';
 
 
@@ -60,22 +55,13 @@ function Balance(){
   }
   
   function BalanceForm(props){
-    // const ctx = React.useContext(UserContext);
-    // const [user, setUser] = React.useState('');
+ 
     const [email, setEmail]   = React.useState('');
     const [password, setPassword] = React.useState('');
-    // const email = ctx.users.email;
-    // const [balance, setBalance] = React.useState('');  
- 
-
+  
 // i dont think email will work here. I need to find a way to target specific data
-  // axios call goes here
   // axios call works, but cant do anything with it without being able to target data
   function handle(){
-    // console.log(email, balance);
-    // ctx.users.push({email, balance});
-    // props.setShow(false);
-    
 // axios call below
   const configuration = {
     method: "get",
@@ -94,7 +80,6 @@ axios(configuration)
 props.setShow(false);
 
 }
-
 
     return (<>
   
@@ -121,5 +106,5 @@ props.setShow(false);
     </>);
    
     }
-  // }
+
 export default Balance;
