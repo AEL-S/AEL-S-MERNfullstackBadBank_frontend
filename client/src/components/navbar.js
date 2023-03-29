@@ -6,7 +6,7 @@ import React from 'react';
     return(
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           {/* may change / back to #, not sure - seeing if achange makes an error go away */}
-  <a className="navbar-brand" href="#/home">Home</a>
+  <a className="navbar-brand" href="#/">Home</a>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
