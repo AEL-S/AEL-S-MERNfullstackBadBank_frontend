@@ -1,12 +1,9 @@
-// create account page 100% functional - still need to look into requiring auth - but later
+// create account page functional - still figuring out how to implement auth 
 
 import React from 'react';
 import axios from 'axios';
 import UserContext from '../components/context';
 import Card from 'react-bootstrap/Card';
-// import { useState } from "react";
-// import {useState, useEffect } from 'react'
-// import Button from 'react-bootstrap/Button';
 import balance from '../components/balance'
 
 function CreateAccount(){ 
@@ -49,8 +46,7 @@ function CreateAccountMsg(props){
       console.log(name,email,password, balance);
       ctx.users.push({name, email, password, balance});
       props.setShow(false);
-//  -------------------------------------------------------- seperate code below
-    // this woooooooooorrrrrrkkkkkksssss!!!! below!
+
     const configuration = {
         method: "post",
         url: "http://localhost:3100/api/createaccount",
@@ -69,8 +65,6 @@ function CreateAccountMsg(props){
   props.setShow(false);
     }
    
-
-
     return (<>
   
       Name<br/>
