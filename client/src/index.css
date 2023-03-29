@@ -1,0 +1,25 @@
+
+
+body{
+  /* background-color: green; */
+    background-color: black;
+    color: rgb(238, 182, 13);
+    text-align: center;
+  
+  }
+  /* this is main style sheet */
+  
+    .card {
+      /* margin above didnt seem to do anything */
+      margin: 0 auto;
+      width: '24rem';
+      /* background-color: red!important; */
+      /* above didn't work..intersting */
+      background-color: rgb(40, 40, 46);
+      text-align: center;
+  
+  }
+/* below not working for whatever reason */
+  .nav-link:hover{
+    color: rgb(238, 182, 13);
+  }
